@@ -1,317 +1,934 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <title>Tanmay Nandwana -Portfolio</title>
+
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanmay Nandwana - Portfolio</title>
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --text-color: #1f2937;
-            --bg-color: #ffffff;
-            --section-bg: #f3f4f6;
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-        }
+    <link rel="stylesheet" type="text/css" href="css/vendor.css">
 
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
-        .header-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+    <link rel="stylesheet" type="text/css" href="style.css">
 
-        .profile-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
 
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
 
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Nunito+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
-        nav {
-            background-color: var(--secondary-color);
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+    <!-- script
+	================================================== -->
+    <script src="js/modernizr.js"></script>
 
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s;
-        }
-
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
-
-        section {
-            padding: 4rem 2rem;
-        }
-
-        section:nth-child(even) {
-            background-color: var(--section-bg);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            text-align: center;
-            color: var(--primary-color);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .skill-item {
-            background-color: white;
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .skill-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-title {
-            font-size: 1.25rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .project-tech {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 1rem;
-        }
-
-        .experience-item {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .experience-title {
-            font-size: 1.25rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .experience-date {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
-
-            .profile-title {
-                font-size: 2rem;
-            }
-
-            section {
-                padding: 2rem 1rem;
-            }
-        }
-    </style>
 </head>
-<body>
-    <header>
-        <div class="header-content">
-            <h1 class="profile-title">Tanmay Nandwana</h1>
-            <p>Computer Science Engineer | Full Stack Developer</p>
-            <div class="contact-info">
-                <a href="mailto:tanmaynandwana48@gmail.com">📧 Email</a>
-                <a href="https://www.linkedin.com/in/tanmay-nandwana-66ba88149" target="_blank">👥 LinkedIn</a>
-                <a href="https://tanmaynandwana.in" target="_blank">🌐 Portfolio</a>
-            </div>
+
+<body data-bs-spy="scroll" data-bs-target="#navigation-bar" tabindex="0">
+    <div class="offcanvas-btn text-end m-3">
+        
+        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <iconify-icon icon="ci:hamburger-lg" style="font-size: 30px;"></iconify-icon>
+        </button>
+    </div>
+    
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-    </header>
+        <div class="offcanvas-body">
+            <header class="hero position-fixed">
+                <div class="container hero-container text-center align-content-between">
 
-    <nav>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-        </ul>
-    </nav>
+                    <div>
+                        <img src="https://lh3.googleusercontent.com/ogw/AF2bZyizBWdybCaJKvor0hMt2hcJ-H9NiF5vmYrXNy2PQ-TBXgE=s64-c-mo" class="hero-img mb-4 rounded-circle" alt="Bootstrap Themes"
+                            width="140" height="140" loading="lazy">
 
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p>Currently pursuing B.Tech in Computer Science and Engineering at SRM University, Sonipat. Passionate about building innovative solutions and exploring new technologies. Experienced in full-stack development and cloud technologies.</p>
-        </div>
-    </section>
 
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">Java</div>
-                <div class="skill-item">Python</div>
-                <div class="skill-item">JavaScript</div>
-                <div class="skill-item">React.js</div>
-                <div class="skill-item">Node.js</div>
-                <div class="skill-item">AWS</div>
-                <div class="skill-item">Docker</div>
-                <div class="skill-item">MongoDB</div>
-                <div class="skill-item">MySQL</div>
-                <div class="skill-item">Flutter</div>
-                <div class="skill-item">GCP</div>
-                <div class="skill-item">RESTful APIs</div>
-            </div>
-        </div>
-    </section>
+                        <h2 class="fw-bold">Tanmay Nandwana</h2>
+                        <p>"Crafting code is like painting with logic. Every program is a masterpiece in progress.".</p>
+                        <div class="social-icon my-2">
+                            <p>
+                                <a class="social-link mx-3 active" href="#"> <iconify-icon
+                                        icon="icomoon-free:facebook"></iconify-icon> </a>
+                                <a class="social-link mx-3 " href="#"> <iconify-icon
+                                        icon="icomoon-free:instagram"></iconify-icon> </a>
+                                <a class="social-link mx-3 " href="#"> <iconify-icon
+                                        icon="icomoon-free:twitter"></iconify-icon> </a>
+                                <a class="social-link mx-3 " href="#"> <iconify-icon
+                                        icon="icomoon-free:youtube"></iconify-icon> </a>
+                            </p>
 
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3 class="project-title">ERP System</h3>
-                    <p class="project-tech">PHP, MySQL, Bootstrap-CSS, JavaScript, AJAX</p>
-                    <p>Comprehensive ERP system for educational institutes with features for student information management, course scheduling, and fee management. Implemented role-based access control and real-time updates.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="mb-5">
+                        <p class="copyright "> Made with  <a href="https://tanmaynandwana.in/">
+                            &#10084;&#65039;
+                                 </a> </p>
+                    </div>
+
+
+
                 </div>
-                <div class="project-card">
-                    <h3 class="project-title">WhatsApp Clone</h3>
-                    <p class="project-tech">Java, Firebase, Agora Video SDK</p>
-                    <p>Feature-rich chat application with real-time messaging, video calls, and push notifications. Implemented secure user authentication and custom UI components.</p>
-                </div>
-                <div class="project-card">
-                    <h3 class="project-title">Grocery Delivery App</h3>
-                    <p class="project-tech">PHP, MySQL, Bootstrap-CSS, JavaScript</p>
-                    <p>User-friendly grocery delivery platform with real-time order tracking and responsive design. Efficient backend management system for order processing.</p>
-                </div>
-            </div>
+            </header>
         </div>
-    </section>
+    </div>
 
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Experience & Achievements</h2>
-            <div class="experience-item">
-                <h3 class="experience-title">Core Member - Centre for Innovation Incubation and Entrepreneurship</h3>
-                <p class="experience-date">February 2023 - Present</p>
-                <p>Led development of innovative projects including an autonomous drone and IoT home automation system. Contributed to cutting-edge technology implementations.</p>
+    <div class="container-fluid">
+        <div class="row">
+
+            <section id="navigation-bar" class="navigation position-fixed ">
+
+
+                <ul class="nav nav-pills text-center align-items-center mt-5 ms-xl-5 ms-3 ">
+                    <li>
+                        <a href="#home" class="nav-link active rounded-0" aria-current="page" data-bs-toggle="tooltip"
+                            data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
+                            <iconify-icon icon="ic:round-home"></iconify-icon>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" class="nav-link rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
+                            aria-label="Dashboard" data-bs-original-title="Dashboard">
+                            <iconify-icon icon="ic:round-person"></iconify-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#resume" class="nav-link rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
+                            aria-label="Orders" data-bs-original-title="Orders">
+                            <iconify-icon icon="ic:round-school"></iconify-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="nav-link rounded-0" data-bs-toggle="tooltip"
+                            data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+                            <iconify-icon icon="ic:round-business-center"></iconify-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#blog" class="nav-link rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
+                            aria-label="Customers" data-bs-original-title="Customers">
+                            <iconify-icon icon="ic:round-menu-book"></iconify-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav-link rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
+                            aria-label="Customers" data-bs-original-title="Customers">
+                            <iconify-icon icon="ic:round-phone"></iconify-icon>
+                        </a>
+                    </li>
+                </ul>
+
+            </section>
+
+            <div class="col-xl-6 offset-xl-2">
+                <div class="container content-container">
+
+                    <section id="home" class="mt-0">
+
+                        <div class=" py-lg-4 my-lg-4 text-center">
+                            <h1 class="fw-bold">Hi I’m Tanmay Nandwana</h1>
+                            <div class="col-lg-10 mx-auto">
+                                <p class="lead-paragraph mb-4">
+                                    I am an experienced Back-end and App developer with a growing enthusiasm for front-end design.</p>
+                            </p>
+                                <div class=" gap-2 d-sm-flex justify-content-sm-center">
+                                    <button type="button" class="btn btn-primary btn-lg mt-3">HIRE ME</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section id="about" class="mt-0">
+
+                        <div class="py-4 my-4 ">
+                            <h1 class="fw-bold mt-5">About Me</h1>
+                            <p class="lead-paragraph my-4">
+                                Hello! I'm Tanmay Nandwana, a Back-end and App developer with a passion for building efficient and scalable applications. I specialize in server-side technologies and enjoy solving complex challenges to create reliable systems.
+                            </p>
+                        </div>
+
+                        <hr class="mid-break my-2">
+
+                        <div class=" py-4 my-4 ">
+                            <h2 class="fw-bold">Personal Info</h2>
+
+                            <ul class="list-unstyled">
+                                <li><b>Age:</b> 20 </li>
+                                <li><b>Residence:</b> Jaipur </li>
+                                <li><b>Address:</b> Jaipur, 302029</li>
+                                <li><b>E-mail:</b> <a href="mailto:tanmaynandwana48@gmail.com">tanmaynandwana48@gmail.com</a></li>
+                                <li><b>Phone:</b> <a href="tel:+919999990000">+91 9999900000</a></li>
+                            </ul>
+
+                        </div>
+
+                        <hr class="mid-break my-2">
+
+                        <div class=" py-4 my-4 ">
+                            <h2 class="fw-bold pt-4 pb-5">Services</h2>
+                            <div class="row row-cols-1 row-cols-sm-2 ">
+                                <div class="col d-flex align-items-start pb-5">
+                                    <img src="images/browser page account.png" alt="image">
+                                    <div>
+                                        <h4 class="fw-bold mb-0">Web Design</h4>
+                                        <p class="mb-1">Specializing in creating intuitive and visually appealing websites.</p>
+                                        
+                                        <a href="#" class="icon-link text-black fs-6 mt-0">More
+                                            info</a>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start pb-5">
+                                    <img src="images/shipment upload.png" alt="image">
+                                    <div>
+                                        <h4 class="fw-bold mb-0">Package Design</h4>
+                                        <p class="mb-1">Crafting sleek, efficient, and robust package designs tailored for performance and scalability.
+                                        </p>
+                                        <a href="#" class="icon-link text-black fs-6 mt-0">More
+                                            info</a>
+
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start pb-5">
+                                                                  <img src="images/et--gears.png">
+                                    <div>
+                                        <h4 class="fw-bold mb-0">Backend Development</h4>
+                                        <p class="mb-1">Focused on designing and implementing server-side logic, databases, and APIs to build robust and scalable applications.</p>
+                                        
+                                        <a href="#" class="icon-link text-black fs-6 mt-0">More
+                                            info</a>
+
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start pb-5">
+                                    <img src="images/video game logo companion cube.png" alt="image">
+                                    <div>
+                                        <h4 class="fw-bold mb-0">App development</h4>
+                                        <p class="mb-1">Building intuitive, scalable, and high-performance apps that drive user engagement and deliver seamless experiences.
+                                        </p>
+                                        <a href="#" class="icon-link text-black fs-6 mt-0">More
+                                            info</a>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <hr class="mid-break my-2">
+
+                        <div class="py-4 my-5 ">
+                            <h2 class="fw-bold pb-4">Clients</h2>
+                            <div class="row my-3">
+                                <div class="client-content">
+                                    <img src="https://omjee.in/images/logo.png" alt="client" width="140px">
+                                    <img width="80px" src="https://prismasrm.in/images/logoPrisma.png" alt="client">
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="mid-break my-2">
+<!-- testimonials -->
+                        <div class=" py-4 my-5 ">
+                            <h2 class="fw-bold pb-4">Testimonials</h2>
+
+                            <div class="swiper testimonial-swiper">
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide">
+                                        <div class="card testimonials-inner">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-2"><img class="testimonial-image"
+                                                            src="images/quote.png" alt="image"></div>
+                                                    <div class="col-md-10 mt-5">
+                                                        <p class="card-text mb-2">“Lorem ipsum dolor sit amet, consecte
+                                                            adipiscing elit. Dapib eu placerat at nisl posuere aliquet
+                                                            amet
+                                                            pharetra.”
+                                                        </p>
+                                                        <div class="testimonial-details">
+                                                            <h4 class="name fw-bold m-0">Lynda Watson</h4>
+                                                            <p class="testimonial-location">Jacobin</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card testimonials-inner">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-2"><img class="testimonial-image"
+                                                            src="images/quote.png" alt="image"></div>
+                                                    <div class="col-md-10 mt-5">
+                                                        <p class="card-text mb-2">“Lorem ipsum dolor sit amet, consecte
+                                                            adipiscing elit. Dapib eu placerat at nisl posuere aliquet
+                                                            amet
+                                                            pharetra.”
+                                                        </p>
+                                                        <div class="testimonial-details">
+                                                            <h4 class="name fw-bold m-0">Lynda Watson</h4>
+                                                            <p class="testimonial-location">Jacobin</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card testimonials-inner">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-2"><img class="testimonial-image"
+                                                            src="images/quote.png" alt="image"></div>
+                                                    <div class="col-md-10 mt-5">
+                                                        <p class="card-text mb-2">“Lorem ipsum dolor sit amet, consecte
+                                                            adipiscing elit. Dapib eu placerat at nisl posuere aliquet
+                                                            amet
+                                                            pharetra.”
+                                                        </p>
+                                                        <div class="testimonial-details">
+                                                            <h4 class="name fw-bold m-0">Lynda Watson</h4>
+                                                            <p class="testimonial-location">Jacobin</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card testimonials-inner">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-2"><img class="testimonial-image"
+                                                            src="images/quote.png" alt="image"></div>
+                                                    <div class="col-md-10 mt-5">
+                                                        <p class="card-text mb-2">“Lorem ipsum dolor sit amet, consecte
+                                                            adipiscing elit. Dapib eu placerat at nisl posuere aliquet
+                                                            amet
+                                                            pharetra.”
+                                                        </p>
+                                                        <div class="testimonial-details">
+                                                            <h4 class="name fw-bold m-0">Lynda Watson</h4>
+                                                            <p class="testimonial-location">Jacobin</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card testimonials-inner">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-2"><img class="testimonial-image"
+                                                            src="images/quote.png" alt="image"></div>
+                                                    <div class="col-md-10 mt-5">
+                                                        <p class="card-text mb-2">“Lorem ipsum dolor sit amet, consecte
+                                                            adipiscing elit. Dapib eu placerat at nisl posuere aliquet
+                                                            amet
+                                                            pharetra.”
+                                                        </p>
+                                                        <div class="testimonial-details">
+                                                            <h4 class="name fw-bold m-0">Lynda Watson</h4>
+                                                            <p class="testimonial-location">Jacobin</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card testimonials-inner">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-2"><img class="testimonial-image"
+                                                            src="images/quote.png" alt="image"></div>
+                                                    <div class="col-md-10 mt-5">
+                                                        <p class="card-text mb-2">“Lorem ipsum dolor sit amet, consecte
+                                                            adipiscing elit. Dapib eu placerat at nisl posuere aliquet
+                                                            amet
+                                                            pharetra.”
+                                                        </p>
+                                                        <div class="testimonial-details">
+                                                            <h4 class="name fw-bold m-0">Lynda Watson</h4>
+                                                            <p class="testimonial-location">Jacobin</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="swiper-pagination position-static"></div>
+                            </div>
+
+
+
+                        </div>
+
+
+                    </section>
+
+                    <section id="resume">
+                        <div class="py-4 my-4 ">
+                            <h1 class="fw-bold mt-5">Resume</h1>
+                        </div>
+
+                        <hr class="mid-break my-2">
+
+
+                        <div class="py-4 my-4 ">
+                            <h2 class="fw-bold pb-4">Techno Stack</h2>
+
+
+                            <div id="progressbar-tooltip-id" class="progressbar-tooltip">
+
+                                <h4>PHP</h4>
+                                <div class="ab-progress progress-tooltip" data-progress data-tooltip="true"
+                                    data-value="90" data-title=""></div>
+                                <h4>MySQL</h4>
+                                <div class="ab-progress progress-tooltip" data-progress data-tooltip="true"
+                                    data-value="95" data-title=""></div>
+                                <h4>Java</h4>
+                                <div class="ab-progress progress-tooltip" data-progress data-tooltip="true"
+                                    data-value="80" data-title=""></div>
+                                <h4>Flutter</h4>
+                                <div class="ab-progress progress-tooltip" data-progress data-tooltip="true"
+                                    data-value="85" data-title=""></div>
+                                <!-- golang -->
+                                <h4>GoLang</h4>
+                                <div class="ab-progress progress-tooltip" data-progress data-tooltip="true"
+                                    data-value="20" data-title=""></div>
+                                <!-- python -->
+                                <h4>Python</h4>
+                                <div class="ab-progress progress-tooltip" data-progress data-tooltip="true"
+                                    data-value="60" 
+                                    data-title=""></div>
+                                <!-- nodejs -->
+                                <h4>NodeJS</h4>
+                                <div class="ab-progress progress-tooltip" data-progress data-tooltip="true"
+                                    data-value="40" data-title="‎"></div>
+                                <!-- react -->
+                                <h4>React.Js</h4>
+                                <div class="ab-progress progress-tooltip" data-progress data-tooltip="true"
+                                    data-value="20" data-title="20%"></div>
+                                <!-- c -->
+                                <h4>C</h4>
+                                <div class="ab-progress progress-tooltip" data-progress data-tooltip="true"
+                                    data-value="70" data-title="‎ "></div>
+                                <!-- c++ -->
+                                <h4>C++</h4>
+                                <div class="ab-progress progress-tooltip" data-progress data-tooltip="true"
+                                    data-value="40" data-title="‎"></div>
+
+
+                                
+                                
+                            </div>
+
+
+
+
+
+                        </div>
+
+                        <hr class="mid-break my-2">
+
+                        <div class="py-4 my-4 ">
+                            <h2 class="fw-bold pb-4">Experience</h2>
+
+
+                            <div class="row justify-content-start" data-aos="fade-up">
+                                <div class="col-7">
+                                    <div class="data-info ">
+                                        <p class="meta-date">2022 - 2024 <img src="images/Ellipse 7.png" alt="image">
+                                            <a class="open-description"> JP Morgan Chase & Co. </a> </p>
+                                        <h3 class="info-title"> Software engineering Internship</h3>
+                                        <p>
+                                            At JPMorgan Chase, I optimized financial operations by analyzing data and improving processes using their Perspective library, gaining a valuable perspective on the financial sector's technical demands.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            
+                            <div class="row justify-content-end" data-aos="fade-up">
+                                <div class="col-7">
+                                    <div class="data-info ">
+                                        <p class="meta-date"> December 2022 <img src="images/Ellipse 7.png" alt="image"> <a
+                                                class="open-description"> SAP </a></p>
+                                        <h3 class="info-title">Cybersecurity  engineering internship</h3>
+                                        <p> I gained hands-on experience in enhancing the security of Windows Server systems. I was responsible for configuring and fine-tuning these systems to meet industry security standards, ensuring they were robust and secure. My role also involved implementing strong password policies to safeguard against unauthorized access, and I learned how to identify, analyze, and mitigate various security threats. This experience provided me with a solid foundation in cybersecurity practices, allowing me to contribute effectively to maintaining secure IT environments.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <hr class="mid-break my-2">
+
+                        <div class="py-4 my-4 ">
+                            <h2 class="fw-bold pb-4">Education</h2>
+
+                            <div class="row justify-content-start" data-aos="fade-up">
+                                <div class="col-7">
+                                    <div class="data-info ">
+                                        <p class="meta-date">2022 - Present<img src="images/Ellipse 7.png" alt="image">
+                                            <a class="open-description">SRM University</a>
+                                        </p>
+                                        <h3 class="info-title">Computer Science Engineering</h3>
+                                       <p>
+                                        As a Computer Science Engineering student, I have learned the basics of computer science, including programming languages, data structures, algorithms, and software engineering. I have also gained experience in web development, app development, and backend development.
+                                       </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-end" data-aos="fade-up">
+                                <div class="col-7">
+                                    <div class="data-info  ">
+                                        <p class="meta-date">2020-2022 <img src="images/Ellipse 7.png" alt="image"> <a
+                                                class="open-description">Central Public School</a></p>
+                                        <h3 class="info-title"> Senior Secondary</h3>
+                                        <p>
+                                            I completed my senior secondary education at Central Public School, where I studied science and mathematics. I also learned the basics of computer science and programming languages.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-start" data-aos="fade-up">
+                                <div class="col-7">
+                                    <div class="data-info ">
+                                        <p class="meta-date">20010 - 2020 <img src="images/Ellipse 7.png" alt="image"> <a
+                                                class="open-description">Maheshwari Public School</a></p>
+                                        <h3 class="info-title">
+                                            Secondary Education</h3>
+                                        <p> 
+                                            I completed my secondary education at Maheshwari Public School. I learned the basics of computer science and programming languages.
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </section>
+
+                    <section id="portfolio">
+
+
+                        <div class="py-4 my-4 ">
+                            <h1 class="fw-bold mt-5">Portfolio</h1>
+                        </div>
+
+                        <hr class="mid-break my-2">
+
+
+                        <div class="py-4 my-4 ">
+
+                            <div class="mb-5">
+                                <p>
+                                    <button class="filter-button active" data-filter="*">All</button>
+                                    <button class="filter-button" data-filter=".branding">Branding</button>
+                                    <button class="filter-button" data-filter=".tshirt">T-shirt</button>
+                                    <button class="filter-button" data-filter=".package">Package</button>
+                                    <button class="filter-button" data-filter=".website">Website</button>
+                                    <button class="filter-button" data-filter=".poster">Poster</button>
+                                </p>
+                            </div>
+
+
+                            <div class="isotope-container">
+                                <div class="item website col-md-4">
+
+
+                                    <a href="images/Rectangle 49.png" title="Boxed Water" class="image-link">
+
+                                        <img class="portfolio-img" src="images/Rectangle 49.png" alt="image">
+                                        <div class="description">
+                                            <h4>Boxed Water</h4>
+                                        </div>
+
+                                    </a>
+
+                                </div>
+
+                                <div class="item branding col-md-4">
+                                    <a href="images/Rectangle 52.png" title="Boxed Water" class="image-link">
+                                        <img class="portfolio-img" src="images/Rectangle 52.png" alt="image">
+                                        <div class="description">
+                                            <h4>Verve Coffee</h4>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="item tshirt col-md-4">
+                                    <a href="images/Rectangle 51.png" title="Boxed Water" class="image-link">
+                                        <img class="portfolio-img" src="images/Rectangle 51.png" alt="image">
+                                        <div class="description">
+                                            <h4>Childern T-shirt</h4>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="item package col-md-4">
+                                    <a href="images/Rectangle 50.png" title="Boxed Water" class="image-link">
+                                        <img class="portfolio-img" src="images/Rectangle 50.png" alt="image">
+                                        <div class="description">
+                                            <h4>Tote Bag</h4>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="item website col-md-4">
+                                    <a href="images/Rectangle 54.png" title="Boxed Water" class="image-link">
+                                        <img class="portfolio-img" src="images/Rectangle 54.png" alt="image">
+                                        <div class="description">
+                                            <h4>Box Packaging</h4>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="item poster col-md-4">
+                                    <a href="images/Rectangle 53.png" title="Boxed Water" class="image-link">
+                                        <img class="portfolio-img" src="images/Rectangle 53.png" alt="image">
+                                        <div class="description">
+                                            <h4>Coco Oil</h4>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="item tshirt col-md-4">
+                                    <a href="images/Rectangle 55.png" title="Boxed Water" class="image-link">
+                                        <img class="portfolio-img" src="images/Rectangle 55.png" alt="image">
+                                        <div class="description">
+                                            <h4>Graphic T-shirt</h4>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="item branding col-md-4">
+                                    <a href="images/Rectangle 57.png" title="Boxed Water" class="image-link">
+                                        <img class="portfolio-img" src="images/Rectangle 57.png" alt="image">
+                                        <div class="description">
+                                            <h4>Paper Cup</h4>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="item package col-md-4">
+                                    <a href="images/Rectangle 56.png" title="Boxed Water" class="image-link">
+                                        <img class="portfolio-img" src="images/Rectangle 56.png" alt="image">
+                                        <div class="description">
+                                            <h4>Coffee Package</h4>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <section id="blog">
+
+                        <div class="py-4 my-4 ">
+                            <h1 class="fw-bold mt-5">Blog</h1>
+                        </div>
+
+                        <hr class="mid-break my-2">
+
+                        <div class="container py-4 my-4">
+
+                            <div class="row ">
+                                <article class="blog-article col-md-6">
+                                    <div class="image-holder">
+                                        <a href="blog-single.html" class="image-hvr-effect">
+                                            <img src="images/Rectangle 59.png" alt="post" class="post-image">
+                                        </a>
+                                    </div>
+                                    <div class="post-item">
+                                        <p class="meta-date">Feb 14, 2021 <img src="images/Ellipse 7.png" alt="image">
+                                            <a class="open-description">Business</a>
+                                        </p>
+                                        <a href="blog-single.html" class="blog-description">
+                                            <h3 class="info-title text-capitalize">Importance of investing more in
+                                                branding
+                                                first</h3>
+                                        </a>
+
+                                    </div>
+                                </article>
+                                <article class="blog-article col-md-6">
+                                    <div class="image-holder">
+                                        <a href="blog-single.html" class="image-hvr-effect">
+                                            <img src="images/Rectangle 62.png" alt="post" class="post-image">
+                                        </a>
+                                    </div>
+                                    <div class="post-item">
+                                        <p class="meta-date">Feb 11, 2021 <img src="images/Ellipse 7.png" alt="image">
+                                            <a class="open-description">Branding</a>
+                                        </p>
+                                        <a href="blog-single.html" class="blog-description">
+                                            <h3 class="info-title text-capitalize">Latest design trend: minimalism looks
+                                                pleasing</h3>
+                                        </a>
+
+                                    </div>
+                                </article>
+                                <article class="blog-article col-md-6">
+                                    <div class="image-holder">
+                                        <a href="blog-single.html" class="image-hvr-effect">
+                                            <img src="images/Rectangle 66.png" alt="post" class="post-image">
+                                        </a>
+                                    </div>
+                                    <div class="post-item">
+                                        <p class="meta-date">Feb 11, 2021 <img src="images/Ellipse 7.png" alt="image">
+                                            <a class="open-description">Design</a>
+                                        </p>
+                                        <a href="blog-single.html" class="blog-description">
+                                            <h3 class="info-title text-capitalize">Top 100 most beautiful t-shirt prints
+                                                collection</h3>
+                                        </a>
+
+                                    </div>
+                                </article>
+                                <article class="blog-article col-md-6">
+                                    <div class="image-holder">
+                                        <a href="blog-single.html" class="image-hvr-effect">
+                                            <img src="images/Rectangle 72.png" alt="post" class="post-image">
+                                        </a>
+                                    </div>
+                                    <div class="post-item">
+                                        <p class="meta-date">Feb 11, 2021 <img src="images/Ellipse 7.png" alt="image">
+                                            <a class="open-description"> Business </a>
+                                        </p>
+                                        <a href="blog-single.html" class="blog-description">
+                                            <h3 class="info-title text-capitalize">unbelievable secret tips of
+                                                successful
+                                                businesses</h3>
+                                        </a>
+
+                                    </div>
+                                </article>
+                                <article class="blog-article col-md-6">
+                                    <div class="image-holder">
+                                        <a href="blog-single.html" class="image-hvr-effect">
+                                            <img src="images/Rectangle 71.png" alt="post" class="post-image">
+                                        </a>
+                                    </div>
+                                    <div class="post-item">
+                                        <p class="meta-date">Feb 11, 2021 <img src="images/Ellipse 7.png" alt="image">
+                                            <a class="open-description"> Design </a>
+                                        </p>
+                                        <a href="blog-single.html" class="blog-description">
+                                            <h3 class="info-title text-capitalize">Get inspired from every small
+                                                products
+                                                design</h3>
+                                        </a>
+
+                                    </div>
+                                </article>
+                                <article class="blog-article col-md-6">
+                                    <div class="image-holder">
+                                        <a href="blog-single.html" class="image-hvr-effect">
+                                            <img src="images/Rectangle 67.png" alt="post" class="post-image">
+                                        </a>
+                                    </div>
+                                    <div class="post-item">
+                                        <p class="meta-date">Feb 11, 2021 <img src="images/Ellipse 7.png" alt="image">
+                                            <a class="open-description"> Branding </a>
+                                        </p>
+                                        <a href="blog-single.html" class="blog-description">
+                                            <h3 class="info-title text-capitalize">Simple products needs simple branding
+                                            </h3>
+                                        </a>
+
+                                    </div>
+                                </article>
+
+
+
+                            </div>
+
+
+                            <div class="d-flex flex-row justify-content-center mt-3">
+                                <div class="blog-swipe"> <a class="blog-swipe "><iconify-icon
+                                            icon="ic:round-arrow-back"></iconify-icon></a> </div>
+                                <div class="blog-swipe active"> <a class="blog-swipe active">1</a> </div>
+                                <div class="blog-swipe"> <a class="blog-swipe "> 2 </a> </div>
+                                <div class="blog-swipe"> <a class="blog-swipe "> 3 </a> </div>
+                                <div class="blog-swipe"> <a class="blog-swipe "> <iconify-icon
+                                            icon="ic:round-arrow-forward"></iconify-icon></a></div>
+                            </div>
+
+
+                        </div>
+                    </section>
+
+                    <section id="contact">
+
+                        <div class="py-4 my-4 ">
+                            <h1 class="fw-bold mt-5">Contact</h1>
+                            <p>Wanna talk about project, please feel free to contact us.</p>
+                        </div>
+
+
+                        <hr class="mid-break my-2">
+
+                        <div class="py-4 my-4 ">
+
+                            <div class="row justify-content-around">
+                                <div class="col-md-4 contact-list">
+                                    <p class="contact-paragraph"><iconify-icon icon="ic:outline-phone"></iconify-icon>
+                                        +919999999999</p>
+                                </div>
+                                <div class="col-md-4 contact-list">
+                                    <p class="contact-paragraph"><iconify-icon icon="ic:outline-email"></iconify-icon>
+                                        info@tanmaynandwana.in </p>
+                                </div>
+                                <div class="col-md-4 contact-list">
+                                    <p class="contact-paragraph"> <iconify-icon
+                                            icon="ic:outline-location-on"></iconify-icon> Delhi, India</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <hr class="mid-break my-2">
+
+                        <div class="py-4 my-4 ">
+
+                            <h2 class="fw-bold pb-4">Get In Touch</h2>
+
+                            <form name="contactform" method="post" class="form-group contact-form mt-4" id="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" minlength="2" name="name" placeholder="Name*"
+                                        class="form-control" required autocomplete="name" autofocus="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="email" name="email" placeholder="E-mail*" class="form-control" required autocomplete="email">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <textarea class="form-control mt-4 mb-4" name="message" placeholder="Message" style="height: 150px;" required></textarea>
+                                        <button type="submit" name="submit" class="btn btn-primary btn-lg" onclick="sendToWhatsApp(event)">SEND IT</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <hr class="mid-break my-2">
+
+                        <div class="py-4 my-4 ">
+
+                            <h2 class="fw-bold pb-4">Google Map</h2>
+                            <div class="mapouter">
+                                <div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3492.2771256348906!2d77.12533607467789!3d28.919821775509018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390dae878d2dcaf1%3A0xdd00179e64a0846f!2sSRM%20University%20(Sonepat%2C%20Haryana)!5e0!3m2!1sen!2sus!4v1716526747995!5m2!1sen!2sus"
+                                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                                        href="https://getasearch.com/fmovies"></a><br>
+                                    <a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+                                   
+                                </div>
+                            </div>
+
+                    </section>
+
+                </div>
             </div>
-            <div class="experience-item">
-                <h3 class="experience-title">J.P. Morgan Software Engineering Virtual Experience</h3>
-                <p class="experience-date">July 2024</p>
-                <p>Worked with JPMorgan Chase's Perspective library to create data visualization tools for traders. Set up development environment and fixed repository issues.</p>
+
+            <div class="hero-sidebar col-xl-3 offset-xl-1">
+                <header class="hero position-fixed">
+                    <div class="container hero-container text-center my-4 pt-3 align-content-between">
+
+                        <div>
+                            <img src="https://lh3.googleusercontent.com/ogw/AF2bZyizBWdybCaJKvor0hMt2hcJ-H9NiF5vmYrXNy2PQ-TBXgE=s64-c-mo" class="hero-img mb-4 rounded-circle" alt="Bootstrap Themes"
+                                width="140" height="140" loading="lazy">
+
+
+                            <h2 class="fw-bold mt-3">Tanmay Nandwana</h2>
+                            <p>"Crafting code is like painting with logic. Every program is a masterpiece in progress.".</p>
+                            <div class="social-icon my-3">
+                                <p>
+                                    <a class="social-link mx-3 active" href="#"> <iconify-icon
+                                            icon="icomoon-free:facebook"></iconify-icon> </a>
+                                    <a class="social-link mx-3 " href="#"> <iconify-icon
+                                            icon="icomoon-free:instagram"></iconify-icon> </a>
+                                    <a class="social-link mx-3 " href="#"> <iconify-icon
+                                            icon="icomoon-free:twitter"></iconify-icon> </a>
+                                    <a class="social-link mx-3 " href="#"> <iconify-icon
+                                            icon="icomoon-free:youtube"></iconify-icon> </a>
+                                          
+                                </p>
+
+                            </div>
+
+                            
+                            
+                            </ul>
+
+
+                        </div>
+
+
+                        <div class="mb-5">
+                            <p class="copyright ">© Made with ❤️ <a href="https://tanmaynandwana.in/">
+                                    <u>Tanmay Nandwana</u> </a> </p>
+                        </div>
+
+
+                    </div>
+                </header>
             </div>
+
         </div>
-    </section>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/iconify-icon.min.js"></script>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/sendToWhatsapp.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
 
-        // Add active class to nav links on scroll
-        window.addEventListener('scroll', () => {
-            let current = '';
-            document.querySelectorAll('section').forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 60) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
 </body>
+
 </html>
